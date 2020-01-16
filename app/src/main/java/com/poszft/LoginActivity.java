@@ -134,8 +134,7 @@ public class LoginActivity extends BaseActivity {
             public void onClick(View v) {
                 login();
 
-                WebSocketHandler.getDefault().send("你好@@");
-                WebSocketHandler.getDefault().send("ssfsdfs");
+                WebSocketHandler.getDefault().send("你好");
             }
         });
 

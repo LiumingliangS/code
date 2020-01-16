@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#076EED"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付失败"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:src="@mipmap/ic_failure"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="191dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付失败"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="22dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="128dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="23dp"
+            android:text="返回读卡页"
+            android:textSize="17sp"
+            android:textColor="#fff"
+            android:background="@drawable/login_sel_bg"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#076EED"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付成功"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:src="@mipmap/ic_finish"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="191dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付成功"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="22dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_return"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="128dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="23dp"
+            android:text="返回读卡页"
+            android:textSize="17sp"
+            android:textColor="#fff"
+            android:background="@drawable/login_sel_bg"
+            android:gravity="center"
+            />
+    </LinearLayout>
+</LinearLayout>

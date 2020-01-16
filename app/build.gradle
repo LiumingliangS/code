@@ -1,0 +1,72 @@
+apply plugin: 'com.android.application'
+
+android {
+//    编码电脑AS版本：2.3.1
+//    运行设备    5.5寸，安卓5.1，1280*720
+
+    compileSdkVersion 28
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.poszft"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+//        ndk {
+//            abiFilters "armeabi-v7a"  // 指定要ndk需要兼容的架构(这样其他依赖包里mips,x86,armeabi,arm-v8之类的so会被过滤掉)
+//        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+//    使用aar文件需要
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+//    packagingOptions {
+//        exclude 'lib/x86/libiconv.so'
+//        exclude 'lib/armeabi/libiconv.so'
+//        exclude 'lib/armeabi-v7a/libiconv.so'
+//        exclude 'lib/mips/libiconv.so'
+//        exclude 'lib/arm64-v8a/libiconv.so'
+//        exclude 'lib/x86_64/libiconv.so'
+//        exclude 'lib/mips64/libiconv.so'
+//    }
+
+//    sourceSets {
+//        main {
+//            jniLibs.srcDirs = ['libs']
+//        }
+//    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    //    使用aar文件需要
+    compile(name: 'bjyb.jni-release', ext: 'aar')
+    //扫码
+    compile project(':zbarlibary')
+    compile 'com.android.support.constraint:constraint-layout:1.1.3'
+    //noinspection GradleCompatible
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    //noinspection GradleCompatible
+    compile 'com.android.support:support-v4:25.0.0'
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    compile 'com.squareup.okio:okio:1.13.0'
+    compile 'com.zhy:okhttputils:2.0.0'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.githang:status-bar-compat:0.7'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    //websocket
+    compile 'com.github.0xZhangKe:WebSocketDemo:3.1'
+}
